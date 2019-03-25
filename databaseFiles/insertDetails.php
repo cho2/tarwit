@@ -10,7 +10,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 //$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token, $access_token_secret);
 //$content = $connection->get("account/verify_credentials");
 
-$twitteruser = "BlankOnLinux";
+$twitteruser = "Gimpscape";
 $notweets = 30;
 $consumerkey = "HERE";
 $consumersecret = "HERE";
@@ -35,12 +35,12 @@ $twitterid = mysqli_real_escape_string($con, $data->twitterid);
 $twitterid = "@".$twitterid;
 $binary_data = base64_decode( mysqli_real_escape_string($con, $data->photo) );
 $photo_name = "img/".$twitterid.".jpg";
-$photoAddr = "/var/www/html/tarwit/databaseFiles/".$photo_name;
+$photoAddr = "/home/sofyan/apps/tarwit/databaseFiles/".$photo_name;
     // save to server (beware of permissions)
 
 $connection = getConnectionWithAccessToken($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
 
-$str_name = "Saya ".$name." dari  ".$country.", Saya mengunjungi stan #BlankOn di #BekrafHabibieFestival ".$twitterid;
+$str_name = $comment . "\n--Kak ".$twitterid." (".$country.") udah mampir ke #GimpscapeID, kamu?";
 //$tweets = $connection->post("statuses/update", ["status" => $str_name]);
 
 /*
