@@ -35,7 +35,7 @@ $twitterid = mysqli_real_escape_string($con, $data->twitterid);
 $twitterid = "@".$twitterid;
 $binary_data = base64_decode( mysqli_real_escape_string($con, $data->photo) );
 $photo_name = "img/".$twitterid.".jpg";
-$photoAddr = "/home/sofyan/apps/tarwit/databaseFiles/".$photo_name;
+$photoAddr = "/var/www/html/tarwit/databaseFiles/".$photo_name;
     // save to server (beware of permissions)
 
 $connection = getConnectionWithAccessToken($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
