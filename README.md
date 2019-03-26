@@ -1,5 +1,5 @@
 # tarwit
-Stan #BlankOn di #BekrafHabibieFestival
+Stan #GimpscapeID di Yogyakarta
 
 
 ## Kebutuhan
