@@ -48,7 +48,7 @@ form#empForm, form#editForm {
 label.gender {
     padding-top: 0 !important;
 }
-table tr th{
+table tr th,.table-hover > tbody > tr:hover{
     background: rgba(255,255,255,0.4);
 }
 .search-box {
