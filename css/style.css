@@ -1,21 +1,135 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway);
-.wrapper{
-min-height: 960px;
+@import url('https://rsms.me/inter/inter.css');
+html,body {
+    font-family: 'Inter', sans-serif; 
+    font-weight: 100;
+    font-size: 12px;
+    color: white;
+    background: url("../images/bg.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+  }
+.row {
+    position: relative;
+}
+
+.bottom-align-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#deskripsi{
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#deskripsi h3{
+    font-size: 2.3rem;
+}
+
+#deskripsi .row {
+    margin-bottom: 1rem;
+}
+
+#deskripsi p {
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem
 }
 form#empForm, form#editForm {
-padding: 0 35px 15px;
+    padding: 0 35px 15px;
 }
 label.gender {
-padding-top: 0 !important;
+    padding-top: 0 !important;
 }
 table tr th{
-    background: #f8f8f8;
+    background: rgba(255,255,255,0.4);
 }
 .search-box {
     padding-bottom: 0;
 }
+.form-control::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+.input-group-addon{background: white;color: #0369d9;border:1px solid white}
+#contact .form-control {
+    color: white;
+    background: transparent;
+    border: 1px solid #efefef;
+}
+.img-fluid {
+    width: 100%;
+}
+.container-fluid{
+    padding:0
+}
+#contact {
+    /* margin: 32vh 0; */
+    background:rgba(255,255,255,0.125);
+    box-shadow: none;
+    font: 400 12px/16px 'Inter', sans-serif !important;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#contact input,
+#contact textarea {
+  width: 100% !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+  background: transparent !important;
+  padding: 10px !important;
+}
+
+#contact textarea {
+    height: 100px !important;
+    max-width: 100%;
+    resize: none;
+  }  
+
+#contact input:hover,
+#contact input:active,
+#contact input:focus,
+#contact textarea:hover,
+#contact textarea:active,
+.img-thumbnail:hover,
+#contact textarea:focus {
+  background: rgba(255,255,255,0.15) !important;
+  -webkit-transition: color background border-color 0.3s ease-in-out;
+  -moz-transition: color background border-color 0.3s ease-in-out;
+  transition: color background border-color 0.3s ease-in-out;
+}
+#contact input:focus,
+#contact textarea:focus {
+border-color:white !important;
+}
+
+#contact button[type="submit"]{
+    color: white;
+    background:transparent;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+#contact button[type="submit"]:hover,#contact button[type="submit"]:focus,#contact button[type="submit"]:active{
+    color: #0369d9;
+    background:white;
+    border: 1px solid white;
+    -webkit-transition: color border background 0.25s ease-in-out;
+    -moz-transition: color border background 0.25s ease-in-out;
+    transition: color border background 0.25s ease-in-out;
+}
+.img-thumbnail {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+}
 @media screen and (max-width: 368px){
 .wrapper{
     min-width: 340px;
-}   
+}
 }
