@@ -5,8 +5,8 @@
 <!-- Include Bootstrap CSS -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <!-- Include main CSS -->
-<link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/template.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Include jQuery library -->
 <script src="js/jQuery/jquery.min.js"></script>
@@ -15,67 +15,58 @@
 <!-- Include Bootstrap Javascript -->
 <script src="js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="js/webcam.min.js"></script>
+<script type="text/javascript" src="js/webcam.js"></script>
 
 <script src="js/angular-script.js"></script>
 <script src="css/mui/extra/mui-combined.js"></script>
 </head>
 <body>
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+  <div class="container-fluid">
+  <div class="row" style="margin-top:11rem">
+    <div class="col-md-5">
       <div class="wrapper" ng-controller="DbController">
 
-      <form id="contact" class="form-horizontal" name="empList" id="empForm" ng-submit="insertInfo(empInfo);">
-        <div class="row">
+      <form id="contact" class="form-horizontal" style="padding-right:40px" name="empList" id="empForm" ng-submit="insertInfo(empInfo);">
+        <div class="col-md-offset-1">
+        <div class="row" style="margin-top:10px;margin-bottom:20px">
           <div class="col-md-8">
-            <h3>Saya mengunjungi stan <a href="https://twitter.com/hashtag/BlankOn" target="_blank">#BlankOn</a> di<a href="https://twitter.com/hashtag/BekrafHabibieFestival?src=hash" target="_blank">#BekrafHabibieFestival</a></h3>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-6">
-                <img src="images/logo.png"  width="100%" style="padding-top:30">
-              </div>
-              <div class="col-md-6">
-                <img src="images/logo1.png" width="100%" style="margin-bottom:10">
-              </div>
-            </div>
-
-
+            <img src="images/tarwit.png" class="img-fluid">
           </div>
         </div>
 
 
         <fieldset>
-          <input type="text" name="emp_name" class="form-control" placeholder="Nama" ng-model="empInfo.name" value="" autofocus required />
+          <input type="text" name="emp_name" maxlength="11" class="form-control" placeholder="Nama" ng-model="empInfo.name" value="" autofocus required />
         </fieldset>
         <fieldset>
-        <input type="text" name="emp_country" class="form-control" placeholder="Asal / dari" ng-model="empInfo.country" autofocus required />
-        </fieldset>
-        <fieldset>
-        <input type="email" name="emp_email" class="form-control" placeholder="Email" ng-model="empInfo.email" autofocus required />
+        <input type="text" name="emp_country" maxlength="11" class="form-control" placeholder="Kota asal" ng-model="empInfo.country" autofocus required />
         </fieldset>
         <fieldset>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-at"></i></span>
-          <input type="text" name="emp_twitterid" class="form-control" placeholder="Akun Twitter" ng-model="empInfo.twitterid" autofocus required />
+          <input type="text" maxlength="8" name="emp_twitterid" class="form-control" placeholder="Akun Twitter" ng-model="empInfo.twitterid" autofocus required />
         </div>
 
         </fieldset>
         <fieldset>
-          <textarea type="text" name="emp_comment" class="form-control" placeholder="Komentarmu" ng-model="empInfo.comment" autofocus required></textarea>
-        </fieldset>
-        <fieldset>
-            <div class="img-container">
-              <img src="images/user.png" id="results" type="button" class="btn img-thumbnail" data-toggle="modal" data-target="#myModal" ng-click="opencamera()" width="150" height="150">
+          <div class="row">
+            <div class="col-md-8">
+              <textarea type="text" maxlength="160" name="emp_comment" class="form-control" placeholder="Katakan sesuatu" ng-model="empInfo.comment" autofocus required></textarea>
+              <small id="counter">0/160</small>
             </div>
+            <div class="col-md-4">
+              <img src="images/camera.png" id="results" type="button" class="btn img-thumbnail" data-toggle="modal" data-target="#myModal" ng-click="opencamera()" width="180" height="180">
+            </div>
+          </div>
         </fieldset>
         <input id="mydata" type="hidden" name="mydata" ng-model="empInfo.photo"/>
         <div class="alert alert-info" id="tesalert" hidden>
           <strong>Terima Kasih!</strong>
         </div>
         <fieldset>
-          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Kirim</button>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Kirim Twit ke @gimpscape</button>
         </fieldset>
+      </div>
       </form>
 
 
@@ -95,7 +86,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="take_snapshot1()">Shoot</button>
+                <button type="button" class="btn btn-success" ng-click="take_snapshot1()">Shoot</button>
               </div>
             </div>
 
@@ -106,10 +97,29 @@
     <!-- Table to show employee detalis -->
       </div>
     </div>
-    <div class="col-md-2">
-
+    <div class="col-md-7 bottom-align-text" style="padding-left:10rem">
+      <div id="deskripsi">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Komunitas</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/logo.png" class="img-fluid">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10">
+            <p>
+              Gimpscape ID (Gimpscape Indonesia) merupakan komunitas desain grafis yang memfokuskan diri pada perangkat-perangkat lunak bebas dan terbuka atau Free/Libre Open Source Software (FLOSS).
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 
 
 <!-- Include controller -->
@@ -125,7 +135,21 @@
 
   //Webcam.attach( '#my_camera' );
 </script>
-
+<script>
+  $(function(){
+    $("textarea[name='emp_comment']").on('keyup',function(){
+      var x = $("textarea[name='emp_comment']").val().length;
+      $("#counter").html(x+'/160');
+    });
+    $("textarea[name='emp_comment']").on('keypress',function(e){
+      var keyCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+      if (keyCode == 13) {
+        return false;
+      } else
+      return true;
+    });
+  });
+</script>
 
 </body>
 </html>
