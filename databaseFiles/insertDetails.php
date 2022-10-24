@@ -10,7 +10,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 //$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token, $access_token_secret);
 //$content = $connection->get("account/verify_credentials");
 
-$twitteruser = "Gimpscape";
+$twitteruser = "openSUSEID";
 $notweets = 30;
 $consumerkey = "HERE";
 $consumersecret = "HERE";
@@ -40,7 +40,7 @@ $photoAddr = "/var/www/html/tarwit/databaseFiles/".$photo_name;
 
 $connection = getConnectionWithAccessToken($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
 
-$str_name = $comment . "\n--Kak ".$twitterid." (".$country.") udah mampir ke #GimpscapeID, kamu?";
+$str_name = $comment . "\n--Terima kasih Kak ".$twitterid." (".$country.") sudah mampir ke booth #openSUSE di #ILC2022";
 //$tweets = $connection->post("statuses/update", ["status" => $str_name]);
 
 /*
