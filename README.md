@@ -1,5 +1,5 @@
 # Tarwit
-Daftar dan Twit _booth_ openSUSE-ID di Indonesian Linux Connference 2022
+Daftar dan Twit _booth_ openSUSE-ID di Indonesian Linux Conference 2022
 
 ---
 ## Kebutuhan
